@@ -1,18 +1,24 @@
-## Getting Started
+## 🚀 Installation & Start
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Da dieses Projekt sensible API-Keys nutzt, werden diese über **Umgebungsvariablen** geladen. Das schützt deine Zugangsdaten davor, öffentlich einsehbar zu sein.
 
-## Folder Structure
+### 1. API-Keys besorgen
+Du benötigst zwei kostenlose Keys:
+* **Alpha Vantage:** Für die Finanzdaten ([hier anfordern](https://www.alphavantage.co/support/#api-key)).
+* **Mistral AI:** Für die KI-Agenten ([hier anfordern](https://console.mistral.ai/)).
 
-The workspace contains two folders by default, where:
+### 2. Umgebungsvariablen setzen
+Bevor du das Programm startest, musst du folgende Variablen auf deinem System (oder in deiner IDE wie IntelliJ/Eclipse) setzen:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+| Variable | Beschreibung |
+| :--- | :--- |
+| `ALPHA_VANTAGE_KEY` | Dein API-Key von Alpha Vantage |
+| `MISTRAL_API_KEY` | Dein API-Key von Mistral AI |
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 3. Programm ausführen
+Stelle sicher, dass du **Java 21** installiert hast. Du kannst das Projekt mit Maven bauen und starten:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```bash
+mvn clean compile exec:java -Dexec.mainClass="LiveFinanzAgent"
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Es wird noch weiter dran gearbeitet & verändert.
