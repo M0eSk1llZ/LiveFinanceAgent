@@ -12,7 +12,7 @@ import dev.langchain4j.model.mistralai.MistralAiChatModel;
 public class LiveFinanzAgent {
 
     static class FinanzTools {
-        private static final String ALPHA_KEY = "K5EOHVZ14I2HMECP";
+        private static final String ALPHA_KEY = "API KEY";
 
         public String getDaten(String symbol) {
             try {
@@ -45,7 +45,7 @@ public class LiveFinanzAgent {
     public static void main(String[] args) {
         // Das "Gehirn"
         MistralAiChatModel model = MistralAiChatModel.builder()
-            .apiKey("qaZdYU7l7Jp1mK8o3YudmHcAepsaxVm1") 
+            .apiKey("API KEY") 
             .modelName("open-mistral-7b")
             .temperature(0.2)
             .build();
